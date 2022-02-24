@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --Very-dark-desaturated-blue:hsl(238, 29%, 16%);
+    --Soft-red:hsl(14, 88%, 65%);
+    --Soft-violet:hsl(273, 75%, 66%);
+    --Soft-blue:hsl(240, 73%, 65%);
+    --Very-dark-grayish-blue:hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
+    --Light-grayish-blue: hsl(240, 5%, 91%);
+    --White:hsl(0, 0%, 100%);
+}
+
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 12px;
+    color: var(--Very-dark-desaturated-blue);
+    background-image: linear-gradient( var(--Soft-violet), var(--Soft-blue) );
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* =======
+Typography
+========== */
+
+h1{
+    text-align: center;
+    font-size: 32px;
+    margin: .6em 0;
+}
+
+.question{
+    font-size: 1.1em;;
+}
+
+.answer{
+    color: var(--Dark-grayish-blue);
+    margin-top: .5em;
+}
+/* =======
+Layout
+========== */
+
+.container{
+    width: 375px;
+}
+
+.content-box{
+    margin: 0 auto;
+    width: 88%;
+    background-color: var(--White);
+    position: relative;
+    border-radius: 25px;;
+    box-shadow:  0px 40px 70px rgba(11, 2, 22, 0.2);
+}
+.illustration{
+    display: flex;
+    flex-direction: column;
+    transform: translateX(15%);
+}
+.mobile-main-img,
+.mobile-pattern{
+
+    width: 70%;
+}
+
+.mobile-main-img{
+    position: absolute;
+    transform: translateY(-60%);
+}
+
+.desktop-main-img,
+.desktop-pattern{
+    display: none;
+}
+.orange-box{
+    display: none;
+}
+.main-content{
+    margin:0 auto;
+    padding: 0 2em 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.qNa {
+    padding:1em 0;
+    border-bottom: 1px var(--Light-grayish-blue) solid;
+    cursor: pointer;
+}
+
+.qNa:last-child{
+    margin-bottom: 2em;
+}
+
+.question-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.button{
+    display: inline;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-right: 0;
+    margin-bottom: 1em;;
+}
+
+.answer{
+    width: 88%;
+    display: none;
+}
+
+/* =======
+Toggle
+========== */
+.qNa.active .answer{
+    display: block;
+    margin-bottom: 1em;
+}
+.qNa.active .question{
+    font-weight: 700;
+}
+.qNa.active .button{
+    transform: rotate(180deg) translateY(-50%);
+}
+
+@media (min-width: 1440px){
+    .container {
+        width: 980px;
+    }
+   
+
+    .content-box{
+        display: flex;
+        padding: 0;
+        position: relative;
+        overflow: visible;
+        
+    }
+
+
+    .orange-box{
+        display: block;
+        position: absolute;
+        top:50%;
+        transform: translate(-50%,-20%);
+        z-index: 1;
+        width: 145px;;
+    }
+
+   
+
+    .illustration,
+    .split{
+        display: flex;
+    }
+
+    .illustration{
+        flex:1;
+        position: relative;
+        transform: translateX(0%);
+        overflow: hidden;
+        justify-content: center;
+        
+    }
+
+    .mobile-main-img{
+        display: none;
+
+    }
+    .mobile-pattern{
+        display: none;
+    }
+    .desktop-pattern{
+        display: block;
+        position: absolute;
+        transform: translate(-52%, -20%);
+        top:-30px;;
+        width: 700px;
+
+    }
+
+    .desktop-main-img{
+        max-width: 400px;;
+        display: block;
+        width: 100%;
+        transform: translateX(-15%);
+        
+       
+       
+    }
+
+    .split{
+        flex-direction: column;
+        flex: 1;
+    }
+
+    h1{
+        text-align: left;
+        margin-bottom: 0;
+        padding:1em 0;
+    }
+
+    .main-content{
+        margin-bottom: 1em;
+        width: 80%;
+        transform: translateX(-10%);
+    }
+
+    #orange-box.active {
+        transform: translate(-60%,-20%);
+    }
+    .question:hover{
+        color: var(--Soft-red);
+        
+    }
+
+   
+
+
+    
+
+   
+
+   
+   
+   
+
+
+  
+
+   
+   
+
+    
+}
+
+/* === attribution === */
+.attribution{
+    position: absolute;
+    bottom:2em;
+    color:var(--White);
+}
+
+.attribution a{
+    color: aquamarine;
+    text-decoration: none;
+}
