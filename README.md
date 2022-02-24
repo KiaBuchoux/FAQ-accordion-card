@@ -41,7 +41,7 @@ Users should be able to:
 ### What I learned
 
 CSS: 
-- Position: relative & absolute - to put the img to exactly where we wanted
+- Position: relative & absolute - position items to exactly where we wanted
 - Flexbox is really practical when it comes to center items: alight-item/ justfy-content
 - transform: translate X/Y - to position items on the page 
 - z-index 
